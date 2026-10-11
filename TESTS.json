@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-11T12:48:20.514345+00:00",
+  "memoryFunctionTests": {
+    "at": "2026-10-11T12:44:08.475Z",
+    "scope": "Isolated tests of extracted application functions and patched functions with explicit transport/state stubs; not native renderer validation",
+    "passed": 11,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "Complete small histories preserve all turns, order, timeline and completion cursor",
+        "passed": true
+      },
+      {
+        "name": "Single-page loading preserves the continuation cursor",
+        "passed": true
+      },
+      {
+        "name": "Large full history stops before exhaustion and releases every observed turn after GC",
+        "passed": true,
+        "fetchedPages": 26,
+        "originalRequestedPages": 200,
+        "peakReservedEstimateMiB": 125.04696846008301
+      },
+      {
+        "name": "Stale state and request failures release reservations without reporting completion",
+        "passed": true
+      },
+      {
+        "name": "Concurrent loads share the 256 MiB pending-data budget",
+        "passed": true
+      },
+      {
+        "name": "Actual native main-process bundle enforces the same pending budget and protected byte eviction",
+        "passed": true
+      },
+      {
+        "name": "Original canonical-state commit caller preserves completeness on success and never marks budget-stopped history complete",
+        "passed": true
+      },
+      {
+        "name": "Eviction trims both many small items and fewer than 1000 large items, retaining viewport and reload anchors",
+        "passed": true
+      },
+      {
+        "name": "Visible and in-progress items remain protected from eviction",
+        "passed": true
+      },
+      {
+        "name": "Agent restoration uses verified ancestry, rejects cross-host/invalid descendants and never drains parent history",
+        "passed": true
+      },
+      {
+        "name": "Layout changes cannot cascade pages; one scroll fetch and explicit retry still work",
+        "passed": true
+      }
+    ]
+  },
+  "updateChecks": {
+    "at": "2026-10-11T12:44:08.571Z",
+    "passed": true,
+    "checks": [
+      "Numeric version comparison including greater build components",
+      "Same and older releases are not advertised as newer",
+      "Malformed release metadata rejected",
+      "Read-only status dialog",
+      "Offline failure reported without modifying the app"
+    ]
+  },
+  "installer": {
+    "at": "2026-10-11T12:44:05.871469+00:00",
+    "sourceFiles": 3594,
+    "sourceBytes": 2318386060,
+    "installerBytes": 2170880,
+    "installerSha256": "a172c8f5b2cb0478472801c7acfa765ef8739901263ffe213ab06c4d0557f03c",
+    "copyArchiveSha256": "4d3b6acb1ad13c97f08223f32adc89cbc2cef50076bb0e1f23efd5a427ba5410",
+    "copyExecutableSha256": "20c6641ccbbc73aa7658b36bcb399ca442447aa9d6cd8248eb97c9c235a84118"
+  },
+  "installerReproducedFinalArchiveAndExe": true,
+  "sourceBuildGuards": [
+    {
+      "name": "original-destination",
+      "rejected": true
+    },
+    {
+      "name": "existing-copy",
+      "rejected": true
+    },
+    {
+      "name": "unsupported-source",
+      "rejected": true
+    }
+  ],
+  "newProfileEmpty": true,
+  "originalSignatureRechecked": "Valid",
+  "nativeSoakNote": "Earlier build with identical history repair, before later launcher and update integration; see EVIDENCE.json",
+  "finalStartup": "Native copy has a responding window after removing unsupported setAppDetails calls; optional AppUserModelID startup separately smoke-tested",
+  "taskManagerAllProcessesGrouped": false
+}

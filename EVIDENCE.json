@@ -1,0 +1,47 @@
+﻿{
+    "product":  "Codex Desktop for Windows x64",
+    "packageVersion":  "26.1007.2314.0",
+    "appVersion":  "26.1007.21434",
+    "build":  13901,
+    "baseline":  {
+                     "rendererPrivatePeakBytes":  5601353728,
+                     "sampledJsHeapPeakBytes":  3688022392,
+                     "approximateSecondsToCrash":  425,
+                     "nativeOOMConfirmed":  true
+                 },
+    "modifiedCopy":  {
+                         "confirmedVisibleConversationSampleSpanSeconds":  576.226,
+                         "sampleCount":  116,
+                         "crashed":  false,
+                         "heapBytes":  {
+                                           "minimum":  492920768,
+                                           "maximum":  654307512,
+                                           "median":  517007270.0,
+                                           "first":  582621280,
+                                           "last":  535473288
+                                       },
+                         "forcedGC":  false,
+                         "heapSnapshotsDuringRun":  false,
+                         "restoredAgentTabs":  5,
+                         "pendingHistoryBytes":  0,
+                         "historyBudgetStops":  0,
+                         "olderPageLoaded":  true,
+                         "returnedToLatest":  true,
+                         "isolatedTests":  {
+                                               "passed":  11,
+                                               "failed":  0
+                                           },
+                         "unofficialModifiedExecutable":  true
+                     },
+    "originalPreservation":  {
+                                 "archiveSha256":  "C5FDEF328CFA2AD9095786F9C3A7AAA447E68834D31299D6EF2592DA02029038",
+                                 "exeSha256":  "13D7EE588D7AE20F04F7AA25A65AE82917ADA81501304AC8F5E679D0B3306601",
+                                 "authenticodeSignature":  "Valid"
+                             },
+    "limitations":  [
+                        "One finite native workload, not a universal leak-free claim.",
+                        "Existing account/backend shared across separate UI profiles.",
+                        "Complete-history operations above the estimated payload budget fail explicitly; streaming is not implemented.",
+                        "The cause of issue 53012 has not been established by this independent reproduction."
+                    ]
+}
